@@ -1,9 +1,13 @@
 # Noto - Mobile Notes App
 
-![Noto Screenshot]
+## 📸 Screenshots
+
+### 🔹 Noto - Preview 1
 <div align="center">
   <img src="screenshots/1.png" width="900"/>
 </div>
+
+### 🔹 Noto - Preview 2
 <div align="center">
   <img src="screenshots/2.png" width="900"/>
 </div>
