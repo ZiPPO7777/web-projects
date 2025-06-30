@@ -1,8 +1,12 @@
 # Noto - Mobile Notes App
 
-![Noto Screenshot](https://via.placeholder.com/800x400?text=Noto+Screenshot) 
-*(Replace with actual screenshot)*
-
+![Noto Screenshot]
+<div align="center">
+  <img src="screenshots/1.png" width="900"/>
+</div>
+<div align="center">
+  <img src="screenshots/2.png" width="900"/>
+</div>
 Noto is a clean, responsive notes application designed for mobile and desktop use. It offers a simple yet powerful interface for creating, organizing, and managing your notes with features like folders, favorites, pinning, and more.
 
 ## Features
