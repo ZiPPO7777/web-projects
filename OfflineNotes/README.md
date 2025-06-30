@@ -1,16 +1,5 @@
 # Noto - Mobile Notes App
 
-## 📸 Screenshots
-
-### 🔹 Noto - Preview 1
-<div align="center">
-  <img src="screenshots/1.png" width="900"/>
-</div>
-
-### 🔹 Noto - Preview 2
-<div align="center">
-  <img src="screenshots/2.png" width="900"/>
-</div>
 Noto is a clean, responsive notes application designed for mobile and desktop use. It offers a simple yet powerful interface for creating, organizing, and managing your notes with features like folders, favorites, pinning, and more.
 
 ## Features
@@ -45,6 +34,18 @@ When editing a note:
 - `Ctrl+B` - Bold text
 - `Ctrl+I` - Italic text
 - `Ctrl+U` - Underline text
+
+## 📸 Screenshots
+
+### 🔹 Noto - Preview 1
+<div align="center">
+  <img src="screenshots/1.png" width="900"/>
+</div>
+
+### 🔹 Noto - Preview 2
+<div align="center">
+  <img src="screenshots/2.png" width="900"/>
+</div>
 
 ## Installation
 
