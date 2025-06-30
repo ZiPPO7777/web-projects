@@ -97,11 +97,9 @@ MIT License - Free to use and modify
 
 ## Credits
 
-Developed by ZIPPTECH  
-[Your Website/Portfolio Link]
+💻 Developed by ZIPPTECH  
+🌐 [ZIPPTECH Website](https://zipptech.xyz)
 
-Material Icons by Google  
-html2pdf.js by eKoopmans
 
 ---
 
