@@ -63,13 +63,14 @@
 Here are some screenshots of **TypeSpeed Pro** in action:
 
 ### 🕹️ Game Interface
-![Game Screen](images/screenshot1.png)
+![Game Screen](images/GameScreen.png)
 
 ### 🎯 Level Selection & Settings
-![Settings Screen](images/screenshot2.png)
+![Levels Screen](images/GameLevels.png)
+![Settings Screen](images/GameSettings.jpg)
 
 ### 🏆 Achievements & Leaderboard
-![Achievements](images/screenshot3.png)
+![Achievements](images/.jpg)
 
 ---
 
