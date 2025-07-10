@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeSpeed Pro - Ultimate Typing Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">TypeSpeed Pro</h1>
+            <p class="subtitle">Master the Art of Speed Typing</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="game">Game</button>
+            <button class="tab-btn" data-tab="levels">Levels</button>
+            <button class="tab-btn" data-tab="settings">Settings</button>
+            <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
+            <button class="tab-btn" data-tab="achievements">Achievements</button>
+        </nav>
+
+        <!-- Game Screen -->
+        <div class="game-screen active" id="game">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value" id="wpm">0</span>
+                    <span class="stat-label">WPM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="accuracy">100</span>
+                    <span class="stat-label">Accuracy %</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="streak">0</span>
+                    <span class="stat-label">Streak</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="level">1</span>
+                    <span class="stat-label">Level</span>
+                </div>
+            </div>
+
+            <div class="typing-area">
+                <div class="timer" id="timer">60</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="text-display" id="textDisplay"></div>
+                <input type="text" class="typing-input" id="typingInput" placeholder="Start typing here..." autocomplete="off" spellcheck="false">
+            </div>
+
+            <div class="game-controls">
+                <button class="btn" id="startBtn">Start Game</button>
+                <button class="btn btn-secondary" id="pauseBtn" disabled>Pause</button>
+                <button class="btn btn-secondary" id="resetBtn">Reset</button>
+                <button class="btn btn-secondary" id="practiceBtn">Practice Mode</button>
+            </div>
+        </div>
+
+        <!-- Levels Screen -->
+        <div class="game-screen" id="levels">
+            <h2>Select Level</h2>
+            <div class="level-selection">
+                <div class="level-card" data-level="1">
+                    <h3>Level 1: Basic Words</h3>
+                    <p>Simple common words to get you started</p>
+                </div>
+                <div class="level-card" data-level="2">
+                    <h3>Level 2: Complex Words</h3>
+                    <p>Longer and more challenging vocabulary</p>
+                </div>
+                <div class="level-card" data-level="3">
+                    <h3>Level 3: Sentences</h3>
+                    <p>Full sentences with punctuation</p>
+                </div>
+                <div class="level-card" data-level="4">
+                    <h3>Level 4: Code Syntax</h3>
+                    <p>Programming language syntax</p>
+                </div>
+                <div class="level-card" data-level="5">
+                    <h3>Level 5: Advanced</h3>
+                    <p>Complex quotes and technical text</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Screen -->
+        <div class="game-screen" id="settings">
+            <h2>Game Settings</h2>
+            <div class="settings-grid">
+                <div class="setting-group">
+                    <h3>Appearance</h3>
+                    <div class="setting-item">
+                        <label>Theme</label>
+                        <select id="themeSelect">
+                            <option value="dark">Dark Mode</option>
+                            <option value="light">Light Mode</option>
+                            <option value="neon">Neon Mode</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label>Font Size</label>
+                        <input type="range" id="fontSizeSlider" min="12" max="24" value="18">
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Audio</h3>
+                    <div class="setting-item">
+                        <label>Sound Effects</label>
+                        <select id="soundSelect">
+                            <option value="classic">Classic Keys</option>
+                            <option value="mechanical">Mechanical</option>
+                            <option value="typewriter">Typewriter</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label>Background Music</label>
+                        <select id="musicSelect">
+                            <option value="ambient">Ambient</option>
+                            <option value="focus">Focus</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Gameplay</h3>
+                    <div class="setting-item">
+                        <label>Game Duration (seconds)</label>
+                        <input type="range" id="durationSlider" min="30" max="300" value="60">
+                    </div>
+                    <div class="setting-item">
+                        <label>Difficulty Mode</label>
+                        <select id="difficultySelect">
+                            <option value="easy">Easy</option>
+                            <option value="normal">Normal</option>
+                            <option value="hard">Hard</option>
+                            <option value="extreme">Extreme</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Profile</h3>
+                    <div class="setting-item">
+                        <label>Player Name</label>
+                        <input type="text" id="playerName" placeholder="Enter your name">
+                    </div>
+                    <div class="setting-item">
+                        <label>Avatar</label>
+                        <select id="avatarSelect">
+                            <option value="🎮">🎮 Gamer</option>
+                            <option value="⚡">⚡ Speedster</option>
+                            <option value="🏆">🏆 Champion</option>
+                            <option value="🎯">🎯 Precision</option>
+                            <option value="🚀">🚀 Rocket</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div class="game-screen" id="leaderboard">
+            <h2>Leaderboard</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>WPM</th>
+                        <th>Accuracy</th>
+                        <th>Level</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <!-- Dynamic content -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Achievements Screen -->
+        <div class="game-screen" id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements-grid" id="achievementsGrid">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Game Over!</h2>
+            <div id="finalStats"></div>
+            <div class="game-controls">
+                <button class="btn" id="playAgainBtn">Play Again</button>
+                <button class="btn btn-secondary" id="viewStatsBtn">View Stats</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+      
+    </script>
+</body>
+</html>
