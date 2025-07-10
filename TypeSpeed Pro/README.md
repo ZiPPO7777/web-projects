@@ -3,6 +3,7 @@
 **TypeSpeed Pro** is a powerful and interactive typing game developed by the **ZIPPTech Team** to help users enhance their typing speed, accuracy, and overall keyboard skills. With rich features, sleek animations, and customizable gameplay, it makes learning to type fast both fun and rewarding.
 
 ---
+## Check Out: [TypeSpeed Pro](https://zipptech.xyz/projects/typespeedpro.html)
 
 ## 🚀 Key Features
 
